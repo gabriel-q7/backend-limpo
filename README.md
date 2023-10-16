@@ -1,15 +1,11 @@
-# Elysia with Bun runtime
+# Backend limpo
 
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
-```bash
-bun create elysia ./elysia-example
-```
+- Application developed with Bun, Elysia and Prisma
 
-## Development
-To start the development server run:
-```bash
-bun run dev
-```
+$ bunx prisma generate --schema=./src/external/prisma/schema.prisma
 
-Open http://localhost:3000/ with your browser to see the result.
+$ bunx prisma migrate dev --name init --schema=./src/external/prisma/schema.prisma
+
+## DB container
+
+$ podman run --name some-postgres -p 5432:5432 -e POSTGRES_USER="myuser" -e POSTGRES_DB="mydatabase" -e POSTGRES_PASSWORD="123456" -d postgres
