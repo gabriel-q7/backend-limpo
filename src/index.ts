@@ -6,7 +6,7 @@ import UserRepositoryPrismaPg from "./external/prisma/UserRepository.prisma-pg";
 import GetUsers from "./core/user/service/getUsers";
 import GetUsersController from "./adapters/getUsers.controller";
 import GetUserById from "./core/user/service/getUserById";
-import GetUserByIdController from "./adapters/getUserById";
+import GetUserByIdController from "./adapters/getUserById.controller";
 
 const app = new Elysia();
 
